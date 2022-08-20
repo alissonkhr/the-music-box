@@ -15,7 +15,7 @@ A list of routes: <br />
 GET(index) /music/ allows users to see collection of music<br />
 GET(show) /music/:id/ allows users to see the selected music post in more detail<br />
 GET(new) /music/new/ allows users to add a new music post to collection<br />
-POST(create) /music/ allows users to have music post store in index route<br />
+POST(create) /music/ allows users to have music post stored in index route<br />
 GET(edit) /music/:id/edit/ allows users to edit selected music post<br />
 PUT(update) /music/ allows users to store edited music post with the new info<br />
 DELETE(destroy) /music/ allows users to delete a music post<br />
