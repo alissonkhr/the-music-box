@@ -1,3 +1,18 @@
 <%- include('./partials/header.ejs') %>
     <h1>The Music Box</h1>
+    <h3>Edit your Jamz</h3>
+    <form action="/music/<%= music.id %>?_method=PUT" method="POST">
+        Title: <input type="text" name="title" value="<%=music.title%>"/>
+        Artist: <input type="text" name="artist" value="<%=music.artist %>"/>
+        Image: <input type="url" name="image" value="<%=music.image%>"/>
+        Note: <input type="text" name="note" value="<%=music.note%>"/>
+        Is this an Album? 
+        <input type="checkbox" name="album"
+            <% if(music.album === true) { %>
+                checked
+            <% } %>
+        />
+        <br>
+        <input type="submit" name="" value="Submit Changes"/>
+    </form>
 <%- include('./partials/footer.ejs') %>

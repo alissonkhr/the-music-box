@@ -1,3 +1,26 @@
 <%- include('./partials/header.ejs') %>
     <h1>The Music Box</h1>
+
+    <h3>Add Tunes!</h3>
+
+    <form method="POST" action="/music">
+      <fieldset>
+        <label for="title">Title:</label>
+        <input id="title" type="text" name="title" placeholder="Enter song/album title">
+        <label for="artist">Artist:</label>
+        <input id="artist" type="text" name="artist" placeholder="Enter artist name">
+      </fieldset>
+      <fieldset>
+        <label for="image">Song/Album Image URL:</label>
+        <input id="image" type="url" name="image" placeholder="URL only">
+      </fieldset>
+      <fieldset>
+        <label for="note">Note about the music:</label>
+        <input id="note" type="text" name="note" placeholder="Thoughts...">
+        <label for="album">Is this an album?</label>
+        <input id="album" type="checkbox" name="album">
+      </fieldset>
+      <button>Add to Music Box</button>
+    </form>
+
 <%- include('./partials/footer.ejs') %>

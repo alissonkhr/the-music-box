@@ -1,3 +1,15 @@
 <%- include('./partials/header.ejs') %>
     <h1>The Music Box</h1>
+    <h3><%= music.title %></h1>
+    <img src="<%= music.image %> " alt="">
+    <p>Artist: <%= music.artist %></p>
+    <p>Note from Poster: <%= music.note %> </p>
+    <% if(music.album === true) { %>
+      <p> This is an album :)</p>
+    <% } else { %>
+      <p> This is a song (or playlist)! </p>
+    <% } %>
+   <p></p><a href="/music/<%=music.id%>/edit">
+    <button>EDIT</button>
+  </a></p>
 <%- include('./partials/footer.ejs') %>
