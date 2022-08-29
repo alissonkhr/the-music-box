@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const musicSchema = new Schema(
   {
-    title: { type: String, required: true },
-    artist: { type: String, required: true },
-    image: { type: String, required: true },
-    note: { type: String, required: true },
-    album: { type: Boolean, required: true },
+    title: { type: String, trim: true },
+    artist: { type: String, trim: true },
+    image: { type: String, trim: true },
+    note: { type: String, trim: true },
+    album: { type: Boolean },
   },
   { timestamps: true }
 );

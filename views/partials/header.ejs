@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-bottom">
   <head>
     <title>The Music Box</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+      </style>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
-<nav>
-  <a href="/music">All the Tunes</a>
-  |
-  <a href="/music/new">Add New Tune(s)</a>
+<nav class="navbar has-shadow is-fixed-bottom is-info" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/music">
+      <img src="https://cdn-icons-png.flaticon.com/512/1378/1378161.png" width="32" height="32">
+    </a>
+      <a class="navbar-item" href="/music">
+        All the Tunes
+      </a>
+      <a class="navbar-item" href="/music/new">
+        Add New Tune(s)
+      </a>
+    </div>
+  </div>
 </nav>

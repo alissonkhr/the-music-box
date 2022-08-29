@@ -1,3 +1,9 @@
-body {
-    background-color: brown;
+body, button, input {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html, body, footer {
+    background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=564&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

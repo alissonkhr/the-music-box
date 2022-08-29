@@ -1,26 +1,40 @@
 <%- include('./partials/header.ejs') %>
-    <h1>The Music Box</h1>
+    <h1 class="title has-text-centered pt-3">The Music Box</h1>
 
-    <h3>Add Tunes!</h3>
+    <h3 class="subtitle has-text-centered">Add Tunes!</h3>
 
+    <div class="container is-fluid">
     <form method="POST" action="/music">
-      <fieldset>
-        <label for="title">Title:</label>
-        <input id="title" type="text" name="title" placeholder="Enter song/album title">
-        <label for="artist">Artist:</label>
-        <input id="artist" type="text" name="artist" placeholder="Enter artist name">
-      </fieldset>
-      <fieldset>
-        <label for="image">Song/Album Image URL:</label>
-        <input id="image" type="url" name="image" placeholder="URL only">
-      </fieldset>
-      <fieldset>
-        <label for="note">Note about the music:</label>
-        <input id="note" type="text" name="note" placeholder="Thoughts...">
-        <label for="album">Is this an album?</label>
-        <input id="album" type="checkbox" name="album">
-      </fieldset>
-      <button>Add to Music Box</button>
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+        <input class="input" id="title" type="text" name="title" placeholder="Enter song/album title">
+        </div>
+      </div>
+      <div class="field">
+          <label class="label">Artist</label>
+          <div class="control">
+          <input class="input" id="artist" type="text" name="artist" placeholder="Enter artist name">
+          </div>
+        </div>
+        <div class="field">
+            <label class="label">Song/Album Image</label>
+            <div class="control">
+            <input class="input" id="image" type="url" name="image" placeholder="URL only">
+            </div>
+          </div>
+          <div class="field">
+              <label class="label">Note about the music</label>
+              <div class="control">
+              <input class="input" id="note" type="text" name="note" placeholder="Thoughts...">
+              </div>
+            </div>
+            <label for="album">Is this an album?</label>
+            <input id="album" type="checkbox" name="album">
+            <p class="py-2">
+            <button class="button is-success">Add to The Music Box</button>
+            </p>
     </form>
+    </div>
 
 <%- include('./partials/footer.ejs') %>

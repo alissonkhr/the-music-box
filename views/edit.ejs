@@ -1,18 +1,40 @@
 <%- include('./partials/header.ejs') %>
-    <h1>The Music Box</h1>
-    <h3>Edit your Jamz</h3>
-    <form action="/music/<%= music.id %>?_method=PUT" method="POST">
-        Title: <input type="text" name="title" value="<%=music.title%>"/>
-        Artist: <input type="text" name="artist" value="<%=music.artist %>"/>
-        Image: <input type="url" name="image" value="<%=music.image%>"/>
-        Note: <input type="text" name="note" value="<%=music.note%>"/>
-        Is this an Album? 
-        <input type="checkbox" name="album"
-            <% if(music.album === true) { %>
-                checked
-            <% } %>
-        />
-        <br>
-        <input type="submit" name="" value="Submit Changes"/>
-    </form>
+    <h1 class="title has-text-centered pt-3">The Music Box</h1>
+    <h3 class="subtitle has-text-centered">Edit your Jamz</h3>
+    <div class="container is-fluid">
+        <form action="/music/<%= music.id %>?_method=PUT" method="POST">
+          <div class="field">
+            <label class="label">Edit Title</label>
+            <div class="control">
+            <input class="input" id="title" type="text" name="title" value="<%=music.title%>">
+            </div>
+          </div>
+          <div class="field">
+              <label class="label">Edit Artist</label>
+              <div class="control">
+              <input class="input" id="artist" type="text" name="artist" value="<%=music.artist%>">
+              </div>
+            </div>
+            <div class="field">
+                <label class="label">Edit Song/Album Image URL</label>
+                <div class="control">
+                <input class="input" id="image" type="url" name="image" value="<%=music.image%>">
+                </div>
+              </div>
+              <div class="field">
+                  <label class="label">Edit Note</label>
+                  <div class="control">
+                  <input class="input" id="note" type="text" name="note" value="<%=music.note%>">
+                  </div>
+                </div>
+                <label for="album">Is this an album?</label>
+                <input id="album" type="checkbox" name="album"            <% if(music.album === true) { %>
+                    checked
+                <% } %>
+                />
+                <p class="py-2">
+                <button class="button is-success">Submit Changes</button>
+                </p>
+        </form>
+        </div>
 <%- include('./partials/footer.ejs') %>
