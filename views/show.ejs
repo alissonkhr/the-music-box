@@ -1,13 +1,13 @@
 <%- include('./partials/header.ejs') %>
     <h1 class="title has-text-centered pt-3">The Music Box</h1>
     <h3 class="subtitle has-text-centered is-underlined"><%= music.title %></h3>
-    <div class="columns container is-fluid is-align-items-center">
-    <div class="column is-one-fifth">
+    <div  id="showPageDiv" class="columns container is-fluid is-align-items-center">
+    <div id="showMusicImage" class="column is-one-fifth">
     <figure class="image is-128x128">
     <img src="<%= music.image %>" alt=""> </a>
     </figure>
     </div>
-    <div class="column">
+    <div id="showMusicDetails" class="column">
     <p>Artist: <%= music.artist %></p>
     <p>Note from Poster: <%= music.note %> </p>
     <% if(music.album === true) { %>
@@ -16,12 +16,12 @@
       <p> This is a song (or playlist)! </p>
     <% } %>
     </div>
-    <div class="column">
-   <p><a href="/music/<%=music.id%>/edit">
-    <button>EDIT</button>
+    <div class="column" id="showPageButtons">
+   <p id="editButton"><a href="/music/<%=music.id%>/edit">
+    <button class="button is-danger">Edit</button>
   </a></p>
-  <p><form action="/music/<%=music.id%>?_method=DELETE" method="POST">
-    <input type="submit" value="DELETE" />  
+  <p id="deleteButton"><form action="/music/<%=music.id%>?_method=DELETE" method="POST">
+    <button class="button is-danger">Delete</button>  
   </form></p>
   </div>
   </div>
