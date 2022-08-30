@@ -1,12 +1,12 @@
 //dependencies
 require("dotenv").config();
 console.log(process.env.PORT);
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 //dotenv file working and linked
 
 const express = require("express");
 const app = express();
-const Music = require('./models/music.js');
+const Music = require("./models/music.js");
 const methodOverride = require("method-override");
 
 //mongoose connection
@@ -24,8 +24,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-const musicController = require('./controllers/musicController.js')
-app.use('/music', musicController)
+const musicController = require("./controllers/musicController.js");
+app.use("/music", musicController);
 
 //default route
 app.get("/", (req, res) => {
