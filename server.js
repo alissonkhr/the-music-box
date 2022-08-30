@@ -28,13 +28,11 @@ const musicController = require("./controllers/musicController.js");
 app.use("/music", musicController);
 
 //default route
-app.get("/", (req, res) => {
-  const today = new Date();
-  res.send(`
-    <h1>Time for Tunes</h1>
-    <p>Prepare your ears for jams</p>
-    <p>${today}</p>
-  `);
+//index
+app.get("/", async (req, res) => {
+  let music = await Music.find({});
+  console.log("Music", music);
+  res.render("index.ejs", { music });
 });
 
 //port
