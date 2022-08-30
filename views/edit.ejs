@@ -1,7 +1,7 @@
 <%- include('./partials/header.ejs') %>
     <h1 class="title has-text-centered pt-3">The Music Box</h1>
     <h3 class="subtitle has-text-centered">Edit your Jamz</h3>
-    <div class="container is-fluid">
+    <div id="form" class="container is-fluid">
         <form action="/music/<%= music.id %>?_method=PUT" method="POST">
           <div class="field">
             <label class="label">Edit Title</label>
@@ -27,7 +27,7 @@
                   <input class="input" id="note" type="text" name="note" value="<%=music.note%>">
                   </div>
                 </div>
-                <label for="album">Is this an album?</label>
+                <label for="album"><strong>Is this an album?</strong></label>
                 <input id="album" type="checkbox" name="album"            <% if(music.album === true) { %>
                     checked
                 <% } %>

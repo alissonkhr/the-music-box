@@ -3,7 +3,7 @@
 
     <h3 class="subtitle has-text-centered">Add Tunes!</h3>
 
-    <div class="container is-fluid">
+    <div id="form" class="container is-fluid">
     <form method="POST" action="/music">
       <div class="field">
         <label class="label">Title</label>
@@ -29,7 +29,7 @@
               <input class="input" id="note" type="text" name="note" placeholder="Thoughts...">
               </div>
             </div>
-            <label for="album">Is this an album?</label>
+            <label for="album"><strong>Is this an album?</strong></label>
             <input id="album" type="checkbox" name="album">
             <p class="py-2">
             <button class="button is-success">Add to The Music Box</button>

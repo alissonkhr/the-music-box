@@ -8,12 +8,12 @@
     </figure>
     </div>
     <div id="showMusicDetails" class="column">
-    <p>Artist: <%= music.artist %></p>
-    <p>Note from Poster: <%= music.note %> </p>
+    <p><strong>Artist:</strong> <%= music.artist %></p>
+    <p><strong>Note from Poster:</strong> <%= music.note %> </p>
     <% if(music.album === true) { %>
-      <p> This is an album :)</p>
+      <p> This is an <strong>album</strong> :)</p>
     <% } else { %>
-      <p> This is a song (or playlist)! </p>
+      <p> This is a <strong>song</strong>! </p>
     <% } %>
     </div>
     <div class="column" id="showPageButtons">
