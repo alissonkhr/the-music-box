@@ -25,10 +25,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 const musicController = require("./controllers/musicController.js");
-app.use("/", musicController);
+app.use("/music", musicController);
 
 //default route
-app.get("/music", (req, res) => {
+app.get("/", (req, res) => {
   const today = new Date();
   res.send(`
     <h1>Time for Tunes</h1>
