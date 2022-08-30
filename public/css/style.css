@@ -55,6 +55,11 @@ footer {
 
 #showMusicDetails {
     max-width: fit-content;
+    color: rgb(143, 71, 188);
+}
+
+strong {
+    color: rgb(163, 86, 211);
 }
 
 #editButton, #deleteButton {

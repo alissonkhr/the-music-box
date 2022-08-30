@@ -1,30 +1,30 @@
 <%- include('./partials/header.ejs') %>
-    <h1 class="title has-text-centered pt-3">The Music Box</h1>
+    <h1 class="title has-text-centered pt-3 has-text-white">The Music Box</h1>
 
-    <h3 class="subtitle has-text-centered">Add Tunes!</h3>
+    <h3 class="subtitle has-text-centered has-text-white">Add Tunes!</h3>
 
     <div id="form" class="container is-fluid">
     <form method="POST" action="/music">
       <div class="field">
-        <label class="label">Title</label>
+        <label class="label has-text-info">Title</label>
         <div class="control">
         <input class="input" id="title" type="text" name="title" placeholder="Enter song/album title">
         </div>
       </div>
       <div class="field">
-          <label class="label">Artist</label>
+          <label class="label has-text-info">Artist</label>
           <div class="control">
           <input class="input" id="artist" type="text" name="artist" placeholder="Enter artist name">
           </div>
         </div>
         <div class="field">
-            <label class="label">Song/Album Image</label>
+            <label class="label has-text-info">Song/Album Image</label>
             <div class="control">
             <input class="input" id="image" type="url" name="image" placeholder="URL only">
             </div>
           </div>
           <div class="field">
-              <label class="label">Note about the music</label>
+              <label class="label has-text-info">Note about the music</label>
               <div class="control">
               <input class="input" id="note" type="text" name="note" placeholder="Thoughts...">
               </div>
