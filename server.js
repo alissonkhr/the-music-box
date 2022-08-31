@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 5000;
 //dotenv file working and linked
 
 const express = require("express");
+const bodyParser = require("body-parser");
+const { check, validationResult } = require("express-validator");
 const app = express();
 const Music = require("./models/music.js");
 const methodOverride = require("method-override");
@@ -19,10 +21,13 @@ mongoose.connection.once("open", () => {
 });
 
 //middleware
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+
+app.set("view engine", "ejs");
 
 const musicController = require("./controllers/musicController.js");
 app.use("/music", musicController);

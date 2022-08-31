@@ -1,7 +1,10 @@
 //dependencies
 const express = require("express");
+const bodyParser = require("body-parser");
+const { check, validationResult } = require("express-validator");
 const router = express.Router();
 const Music = require("../models/music.js");
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //index
 router.get("/", async (req, res) => {
@@ -58,21 +61,40 @@ router.get("/:id", async (req, res) => {
 });
 
 //create
-router.post("/", (req, res) => {
-  if (req.body.album === "on") {
-    req.body.album = true;
-  } else {
-    req.body.album = false;
-  }
-  Music.create(req.body, (error, createdMusic) => {
-    if (error) {
-      console.log("error", error);
-      res.send(error);
-    } else {
-      res.redirect("/music");
+router.post(
+  "/",
+  urlencodedParser,
+  [
+    check("title", "This post needs to have a title.")
+      .exists()
+      .isLength({ min: 2 }),
+    check("artist", "Please add an artist name.").exists().isLength({ min: 2 }),
+  ],
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      // return res.status(400).json({ errors: errors.array() });
+      const alert = errors.array();
+      res.render("new", {
+        alert,
+      });
+    } else if (errors.isEmpty()) {
+      if (req.body.album === "on") {
+        req.body.album = true;
+      } else {
+        req.body.album = false;
+      }
+      Music.create(req.body, (error, createdMusic) => {
+        if (error) {
+          console.log("error", error);
+          res.send(error);
+        } else {
+          res.redirect("/music");
+        }
+      });
     }
-  });
-});
+  }
+);
 
 //delete
 router.delete("/:id", (req, res) => {

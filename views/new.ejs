@@ -3,6 +3,17 @@
 
     <h3 class="subtitle has-text-centered has-text-white">Add Tunes!</h3>
 
+    <% if (typeof alert != 'undefined') { %>
+      <% alert.forEach(function(error) { %>
+       <div id="formAlert" class="container is-fluid">
+         <div class="notification is-warning is-light">
+           <%= error.msg %>
+           <button class="delete"></button>
+         </div>
+         </div>
+      <% }) %> 
+     <% } %>
+
     <div id="form" class="container is-fluid">
     <form method="POST" action="/music">
       <div class="field">
