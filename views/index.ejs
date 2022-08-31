@@ -4,12 +4,17 @@
     <ul id="music">
         <% for(let i = 0; i < music.length; i++) { %>
           <li id="musicPosts">
+            <a href="/music/<%= music[i].id %>"> 
             <figure class="image is-128x128">
-              <a href="/music/<%= music[i].id %>"> <img src="<%= music[i].image %>" alt="<%= music[i].title %> "> </a>
+            <img src="<%= music[i].image %>" alt="<%= music[i].title %> ">
             </figure>
+            <div id="hoverContent">
+              <h2 class="has-text-white">View</h2>
+            </div>
             <!--<form action="/music/<%=music[i].id%>?_method=DELETE" method="POST">
               <input type="submit" value="DELETE" />  
             </form> not going to include delete button in index -->
+            </a>
            </li>
         <% } %>
       </ul>
