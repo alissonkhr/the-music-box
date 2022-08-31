@@ -46,7 +46,8 @@ General flow of project completion was creating the server and establishing the 
 > At least one Github commit per day of working on the project<br />
 
 ### Unsolved Problems
-> None as of yet, but want to create a way to disable the submit button for a new post until data is entered to avoid potential bugs.
+> None as of yet, but want to create a way to disable the submit button for a new post until data is entered to avoid potential bugs.<br />
+> Make the show page cleaner for mobile view.
 
 
 ### Stretch Goals
