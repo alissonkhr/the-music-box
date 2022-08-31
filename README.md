@@ -1,4 +1,6 @@
 ## The Music Box
+App created using Node.js, Mongoose, Express, Bulma CSS Framework, and EJS.
+<br />
 A place for anyone to share music, either an album or just a song, where hopefully an entire collection of music to browse through will be stored!<br />
 
 ## Project Description
@@ -20,6 +22,8 @@ GET(edit) /music/:id/edit/ allows users to edit selected music post<br />
 PUT(update) /music/ allows users to store edited music post with the new info<br />
 DELETE(destroy) /music/ allows users to delete a music post<br />
 
+General flow of project completion was creating the server and establishing the connection, then creating the model, applying all the routes with an established connection, seeding the online database collection into project and then styling it all for deployment.
+
 ## Wireframes
 > Wireframes with basic page layouts<br />
 > ![P2ShowPage](https://user-images.githubusercontent.com/104875707/185763245-a5cafc9f-50ea-4e60-abe8-b5af48bebada.jpg)
@@ -40,6 +44,9 @@ DELETE(destroy) /music/ allows users to delete a music post<br />
 > One model with all 7 RESTful routes and full CRUD<br />
 > Use new CSS Framework<br />
 > At least one Github commit per day of working on the project<br />
+
+### Unsolved Problems
+> None as of yet, but want to create a way to disable the submit button for a new post until data is entered to avoid potential bugs.
 
 
 ### Stretch Goals
