@@ -135,7 +135,7 @@ footer {
     color: rgb(143, 71, 188);
 }
 
-strong {
+strong, a:hover {
     color: rgb(163, 86, 211);
 }
 

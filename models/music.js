@@ -4,6 +4,7 @@ const musicSchema = new Schema(
   {
     title: { type: String, trim: true },
     artist: { type: String, trim: true },
+    link: { type: String, trim: true},
     image: { type: String, trim: true },
     note: { type: String, trim: true },
     album: { type: Boolean },
