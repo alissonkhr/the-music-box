@@ -1,5 +1,12 @@
 <%- include('./partials/header.ejs') %>
-    <h1 class="title has-text-centered pt-3 has-text-white">The Music Box</h1>
+    <h1 id="indexTitle" class="title has-text-centered pt-3 has-text-white">The Music Box</h1>
+    <div id="messageDiv" class="container is-fluid">
+      <article class="message is-info">
+        <div class="message-body has-text-centered">
+          Browse through the music <strong>or</strong> <a href="/music/new">add</a> your own to the collection!
+        </div>
+      </article>
+    </div>
     <div id="indexDiv" class="container is-fluid">
     <ul id="music">
         <% for(let i = 0; i < music.length; i++) { %>

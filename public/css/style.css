@@ -154,3 +154,12 @@ strong, a:hover {
 #formAlert {
     padding-bottom: 10px;
 }
+
+#indexTitle {
+    margin-bottom: 0;
+}
+
+#messageDiv {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
