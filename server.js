@@ -15,7 +15,7 @@ const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const mongoURI = process.env.MONGODB_URI;
 console.log(process.env.MONGODB_URI);
-mongoose.connect(mongoURI);
+mongoose.connect(`${mongoURI}`);
 mongoose.connection.once("open", () => {
   console.log("connected to mongo");
 });

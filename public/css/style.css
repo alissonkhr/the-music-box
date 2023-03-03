@@ -27,7 +27,7 @@ html, footer {
     flex-flow: wrap;
     padding-bottom: 60px;
 }
-
+ /* li:before*/
 #musicPosts:before {
     content: '';
     width: 100%;
@@ -40,10 +40,12 @@ html, footer {
     transition: all .35s ease 0s;
 }
 
+/* li:hover:before*/
 #musicPosts:hover:before {
     opacity: 1;
 }
 
+/* div holding hover h2*/
 #hoverContent {
     position: absolute;
     width: 90%;
@@ -51,7 +53,7 @@ html, footer {
     top: 5%;
     left: 5%;
 }
-
+/* li and hover div:after & :before*/
 #musicPosts #hoverContent:after,
 #musicPosts #hoverContent:before{
     content: '';
@@ -64,6 +66,7 @@ html, footer {
     transition: all .7s ease 0s;
 }
 
+/*li hover div:before*/
 #musicPosts #hoverContent:before{
     border-bottom: 3px solid rgba(255, 255, 255, 0.5);
     border-top: 3px solid rgba(255, 255, 255, 0.5);
@@ -71,6 +74,7 @@ html, footer {
     transform-origin: 0 0 0;
 }
 
+/*li hover div:after*/
 #musicPosts #hoverContent:after{
     border-left: 3px solid rgba(255, 255, 255, 0.5);
     border-right: 3px solid rgba(255, 255, 255, 0.5);
@@ -78,6 +82,7 @@ html, footer {
     transform-origin: 100% 0 0;
 }
 
+/*li h2*/
 #musicPosts h2 {
     font-size: 20px;
     font-weight: 700;
@@ -92,11 +97,13 @@ html, footer {
     text-transform: uppercase;
 }
 
+/*li:hover h2*/
 #musicPosts:hover h2 {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
 
+/*li:hover hover div:after, li:hover hover div:before*/
 #musicPosts:hover #hoverContent:after,
 #musicPosts:hover #hoverContent:before{
     opacity: 1;
